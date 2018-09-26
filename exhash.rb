@@ -5,14 +5,15 @@ fr = ['un','deux','trois','quatre','cinq','six','sept','huit','neuf']
 bd = ['ek','dui','tin','char','panch','choy','saat','aat','noy']
 
 
+system('clear')
 my_hash1 =Hash.new()
 
 
 digits.each.with_index do |value, index|
 
-  my_hash1[value] = {:french => fr[index], :en => en[index], :bd => bd[index]}
+  my_hash1[:"#{value}"] = {:french => fr[index], :en => en[index], :bd => bd[index]}
 
-puts "#{value.class}"
+# puts "#{value.class}"
 
 end
 
@@ -24,9 +25,16 @@ end
 
 
 
+my_hash1.each do |key, value|
+puts ":'#{key }' =>  #{value}"
 
+end
 
- puts "#{ my_hash1 }"
+# a = [1,2,3,2,5,1,7,3]
+# a.each.with_index do |value,index|
+#     puts "#{value} ...ind -> #{index}"
+#    end
+
 
 #
 #
